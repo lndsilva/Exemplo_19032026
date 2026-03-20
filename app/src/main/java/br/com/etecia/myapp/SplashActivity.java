@@ -1,8 +1,11 @@
 package br.com.etecia.myapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 
 
 import androidx.activity.EdgeToEdge;
@@ -12,7 +15,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SplashActivity extends AppCompatActivity {
-
+    //Declarar a variavel global que irá representar o componente xml
+    Button btnIrParaLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +28,22 @@ public class SplashActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //apresentar o java ao xml
+        btnIrParaLogin = findViewById(R.id.btnIrParaLogin);
+
+        //criar um objeto de clique
+        btnIrParaLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),
+                        LoginActivity.class));
+                finish();
+            }
+        });
+
+
 
 
 
     }
-
-
 }

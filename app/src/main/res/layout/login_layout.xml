@@ -17,4 +17,11 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/imgVoltar"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_arrow_back"/>
+
 </LinearLayout>
