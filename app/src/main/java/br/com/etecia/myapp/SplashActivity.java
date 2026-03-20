@@ -40,9 +40,15 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
+        //abrir uma janela em processo de background
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(getApplicationContext(),
+                        LoginActivity.class));
+                finish();
+            }
+        },3000);
 
 
     }
