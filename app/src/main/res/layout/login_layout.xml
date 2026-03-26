@@ -27,16 +27,33 @@
         android:src="@drawable/baseline_arrow_back" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtUsuario"
-        android:hint="E-mail"
-        app:startIconDrawable="@drawable/baseline_email"
-        app:endIconMode="clear_text"
+        android:id="@+id/txtEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:hint="Insira seu e-mail"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/baseline_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:maxLength="50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insira sua senha"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/baseline_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="15" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>
