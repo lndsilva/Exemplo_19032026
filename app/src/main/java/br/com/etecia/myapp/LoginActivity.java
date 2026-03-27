@@ -12,10 +12,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
-    TextInputLayout txtEmail, txtSenha;
+    TextInputEditText txtEmail, txtSenha;
     MaterialButton btnEntrar;
     ImageView imgVoltar;
 
@@ -39,7 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String email, senha;
+                senha = txtSenha.getTe
             }
         });
 
