@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +42,19 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email, senha;
-                senha = txtSenha.getTe
+                email = txtEmail.getText().toString();
+                senha = txtSenha.getText().toString();
+
+                if (email.equals("etecia") && senha.equals("etecia")) {
+                    startActivity(new Intent(getApplicationContext(),
+                            MenuPrincipalActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(
+                            getApplicationContext(),
+                            "Usuário ou senha inválidos",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
