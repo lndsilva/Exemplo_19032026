@@ -11,9 +11,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LoginActivity extends AppCompatActivity {
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputLayout;
 
+public class LoginActivity extends AppCompatActivity {
+    TextInputLayout txtEmail, txtSenha;
+    MaterialButton btnEntrar;
     ImageView imgVoltar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +30,19 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
+        //ligando o java ao xml pelo id
         imgVoltar = findViewById(R.id.imgVoltar);
+        txtEmail = findViewById(R.id.txtEmail);
+        txtSenha = findViewById(R.id.txtSenha);
+        btnEntrar = findViewById(R.id.btnEntrar);
+
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
 
         imgVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
